@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Garante a compatibilidade com o Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura o layout responsivo -->
+    <title>Calculadora</title> <!-- Título da página -->
+    
+    <!-- Links para os arquivos de estilo -->
+    <link rel="stylesheet" href="CSS/reset.css"> <!-- Reset CSS para remover estilos padrões -->
+    <link rel="stylesheet" href="CSS/style.css"> <!-- Estilo principal da calculadora -->
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body id="body_1" class="theme__1">
+    <!-- Corpo principal com tema inicial definido como 'theme__1' -->
+    <main>
+        <!-- Container superior com o título e a troca de tema -->
+        <div id="tema" class="container__superior container">
+            <h1>calc</h1> <!-- Título da calculadora -->
+            <h2>THEME</h2> <!-- Indica a funcionalidade de troca de tema -->
+            <label for="disp" class="switch">
+                <!-- Números dos temas disponíveis -->
+                <div class="theme_number">
+                    <h3>1</h3> <!-- Tema 1 -->
+                    <h3>2</h3> <!-- Tema 2 -->
+                </div>
+                <!-- Botão de alternância de tema -->
+                <input class="theme" type="checkbox" name="theme" id="theme" value="0">
+                <span class="slider round"></span> <!-- Elemento visual do botão de alternância -->
+            </label>
+        </div>
+
+        <!-- Container central para o visor da calculadora -->
+        <div class="container container__central">
+            <input type="text" name="disp" id="disp" class="display" disabled> <!-- Campo de exibição do resultado -->
+        </div>
+
+        <!-- Container inferior com os botões da calculadora -->
+        <div id="botoes" class="container__inferior container">
+            <!-- Linhas de botões numéricos e operadores -->
+            <div class="box box__1"> <button class="botao botao__1" onclick="inserirNumero(7)"> 7 </button> </div>
+            <div class="box box__2"> <button class="botao botao__2" onclick="inserirNumero(8)"> 8 </button> </div>
+            <div class="box box__3"> <button class="botao botao__3" onclick="inserirNumero(9)"> 9 </button> </div>
+            <div class="box box__4"> <button class="botao botao__4" onclick="apagarUltimo()"> DEL </button> </div>
+
+            <div class="box box__5"> <button class="botao botao__5" onclick="inserirNumero(4)"> 4 </button> </div>
+            <div class="box box__6"> <button class="botao botao__6" onclick="inserirNumero(5)"> 5 </button> </div>
+            <div class="box box__7"> <button class="botao botao__7" onclick="inserirNumero(6)"> 6 </button> </div>
+            <div class="box box__8"> <button class="botao botao__8" onclick="inserirNumero('+')"> + </button> </div>
+
+            <div class="box box__9"> <button class="botao botao__9" onclick="inserirNumero(1)"> 1 </button> </div>
+            <div class="box box__10"> <button class="botao botao__10" onclick="inserirNumero(2)"> 2 </button> </div>
+            <div class="box box__11"> <button class="botao botao__11" onclick="inserirNumero(3)"> 3 </button> </div>
+            <div class="box box__12"> <button class="botao botao__12" onclick="inserirNumero('-')"> - </button> </div>
+
+            <div class="box box__13"> <button class="botao botao__13" onclick="inserirNumero('.')"> . </button> </div>
+            <div class="box box__14"> <button class="botao botao__14" onclick="inserirNumero(0)"> 0 </button> </div>
+            <div class="box box__15"> <button class="botao botao__15 keys" onclick="inserirNumero('/')"> / </button> </div>
+            <div class="box box__16"> <button class="botao botao__16 keys" onclick="inserirNumero('*')"> x </button> </div>
+
+            <!-- Botões de funcionalidade: resetar e calcular -->
+            <div class="box box__17"> <button class="botao botao__17" onclick="limpar()"> RESET </button> </div>
+            <div class="box box__18"> <button class="botao result" onclick="calcular()"> = </button> </div>
+        </div>
+    </main>
+
+    <!-- Importa o arquivo de script -->
+    <script src="script.js"></script>
+
+</html>
